@@ -17,7 +17,7 @@
                     {{ __('You are logged in!') }}
 
                     <a href="{{ route('add-new-url') }}" class="btn btn-primary">ADD URL</a>
-                    <a href="{{ route('add-new-url') }}" class="btn btn-primary"> URL List</a>
+                    <a href="{{ route('all-url') }}" class="btn btn-primary"> URL List</a>
                 </div>
             </div>
         </div>

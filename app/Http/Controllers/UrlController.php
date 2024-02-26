@@ -10,13 +10,14 @@ class UrlController extends Controller
     
     public function index()
     {
-        return view('url.create');
+        $url = Url::where('created_by',auth()->id())->get();
+        return view('url.index',compact('url'));
     }
 
     public function create() {
         return view('url.create');
     }
-    
+
     public function store(Request $request)
     {
         $request->validate([
