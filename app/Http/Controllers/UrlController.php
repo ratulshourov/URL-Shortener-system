@@ -9,7 +9,7 @@ class UrlController extends Controller
 {
     public function index()
     {
-        return view('welcome');
+        return view('url.create');
     }
 
     public function store(Request $request)
