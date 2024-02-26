@@ -23,14 +23,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        // if (auth()->check()) {
-        //     // Get the authenticated user's ID
-        //     $userId = auth()->id();
-        //     // Now $userId contains the authenticated user's ID
-        // } else {
-        //     // User is not authenticated
-        // }
-        // dd($userId);
+       
         return view('home');
     }
 }
