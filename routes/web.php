@@ -25,4 +25,4 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::get('/all', [UrlController::class, 'index'])->name('all');
 Route::post('/shorten', [UrlController::class, 'store'])->name('shorten');
-Route::get('/{shortUrl}', [UrlController::class, 'redirectToOriginal']);
+Route::get('/{shortUrl}', [UrlController::class, 'redirectToOriginal'])->name('shorten.redirect');
