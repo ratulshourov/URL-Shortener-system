@@ -7,11 +7,16 @@ use App\Models\Url;
 
 class UrlController extends Controller
 {
+    
     public function index()
     {
         return view('url.create');
     }
 
+    public function create() {
+        return view('url.create');
+    }
+    
     public function store(Request $request)
     {
         $request->validate([
