@@ -15,7 +15,7 @@
                     <th>ID</th>
                     <th>Original URL</th>
                     <th>Short URL</th>
-                    
+                    <th>Click Count</th>
                     <th>Created At</th>
                 </tr>
             </thead>
@@ -25,7 +25,7 @@
                         <td>{{ $item->id }}</td>
                         <td><a href="{{ $item->original_url }}" target="_blank">{{ $item->original_url }}</a></td>
                         <td><a href="{{ route('shorten.redirect', ['shortUrl' => $item->short_url]) }}" target="_blank">{{ route('shorten.redirect', ['shortUrl' => $item->short_url]) }}</a></td>
-                        
+                        <td>{{ $item->click_count }}</td> 
                         <td>{{ $item->created_at }}</td>
                     </tr>
                 @endforeach
