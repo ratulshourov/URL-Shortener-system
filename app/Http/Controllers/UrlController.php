@@ -33,7 +33,7 @@ class UrlController extends Controller
             'created_by'=>auth()->id()
         ]);
 
-        return redirect()->route('home')->with('shortUrl', $shortUrl);
+        return redirect()->route('all-url')->with('shortUrl', $shortUrl);
     }
 
     public function redirectToOriginal($shortUrl)

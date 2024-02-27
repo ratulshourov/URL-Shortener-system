@@ -18,7 +18,7 @@ class CreateUrlsTable extends Migration
             $table->string('original_url');
             $table->string('short_url')->unique();
             $table->integer('created_by');
-            $table->integer('click_count');
+            $table->integer('click_count')->default(0);
             $table->timestamps();
         });
     }

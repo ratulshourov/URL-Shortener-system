@@ -9,7 +9,7 @@
 </head>
 <body>
     <h1>URL List</h1>
-
+    <a  href="{{ route('add-new-url') }}" class="btn btn-primary">ADD URL</a>
     @if(count($url) > 0)
         <table>
             <thead>
