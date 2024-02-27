@@ -4,6 +4,8 @@
 <html>
 <head>
     <title>URL List</title>
+   
+
 </head>
 <body>
     <h1>URL List</h1>
@@ -17,6 +19,7 @@
                     <th>Short URL</th>
                     <th>Click Count</th>
                     <th>Created At</th>
+                    <th>Action</th>
                 </tr>
             </thead>
             <tbody>
@@ -27,6 +30,9 @@
                         <td><a href="{{ route('shorten.redirect', ['shortUrl' => $item->short_url]) }}" target="_blank">{{ route('shorten.redirect', ['shortUrl' => $item->short_url]) }}</a></td>
                         <td>{{ $item->click_count }}</td> 
                         <td>{{ $item->created_at }}</td>
+                        <td><button class="btn btn-primary" onclick="copyToClipboard('{{ route('shorten.redirect', ['shortUrl' => $item->short_url]) }}')">
+                                Copy
+                            </button></td>
                     </tr>
                 @endforeach
             </tbody>
@@ -35,4 +41,15 @@
         <p>No URLs found.</p>
     @endif
 </body>
+<script>
+        function copyToClipboard(text) {
+            const input = document.createElement('input');
+            input.value = text;
+            document.body.appendChild(input);
+            input.select();
+            document.execCommand('copy');
+            document.body.removeChild(input);
+            alert('Short URL copied to clipboard: ' + text);
+        }
+    </script>
 </html>
